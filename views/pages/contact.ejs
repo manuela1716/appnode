@@ -1,0 +1,39 @@
+<%- include('../template/header.ejs'); -%>
+
+    <div class="container mt-5">
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-6">
+                <% if (locals.error) { %>
+                    <div class="alert alert-danger">
+                        Tous les champs sont obligatoires !!!
+                    </div>
+                <% } %>
+                <% if (locals.sucess) { %>
+                    <div class="alert alert-success">
+                        Insertion reussi avec succes !!!
+                    </div>
+                <% } %>
+                <form action="/contact" method="post">
+                    <div class="mb-3">
+                        <label for="nom" class="form-label">NOM</label>
+                        <input type="text" class="form-control" id="nom" name="nom">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">EMAIL</label>
+                        <input type="email" class="form-control" id="email" name="email">
+                    </div>
+                    <div class="mb-3">
+                        <label for="tel" class="form-label">TELEPHONE</label>
+                        <input type="tel" class="form-control" id="tel" name="tel">
+                    </div>
+                    <div class="mb-3">
+                        <label for="comment" class="form-label">DESCRIPTION</label>
+                        <textarea class="form-control" id="comment" rows="3" name="comment"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-secondary">ENVOYER</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+<%- include('../template/footer.ejs'); -%>

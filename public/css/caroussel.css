@@ -1,0 +1,19 @@
+.carousel-item{
+    height: 32rem;
+}
+
+.carousel-item img{
+    filter:brightness(50%);
+}
+
+@media (max-width:520px){
+    .carousel-item{
+        height: auto;
+    }
+}
+
+@media (min-width:800px){
+    .carousel-caption{
+        margin-bottom: 150px;
+    }
+}

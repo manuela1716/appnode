@@ -1,0 +1,17 @@
+<%- include('../template/header.ejs'); -%>
+<link rel="stylesheet" href="css/caroussel.css">
+
+    <%- include('../pages/component/caroussel.ejs'); -%>
+
+    <div class="container mt-5">
+        <h1>HOME PAGE</h1>
+        <div class="row mt-5">
+            <img src="images/car3.png" class="img-fluid">
+            <p>
+                <strong>NOM: </strong><%= nom %> <br>
+                <strong>PRENOM: </strong><%= prenom %> <br>
+            </p>
+        </div>
+    </div>
+
+<%- include('../template/footer.ejs'); -%>
